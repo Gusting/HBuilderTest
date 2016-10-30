@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>loadPage</title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+		
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a id="callback" class="mui-icon mui-icon-back mui-pull-left" onclick="BackHome()"></a>
+			<h1 id="ttt" class="mui-title">Scanning</h1>
+		</header>		 
+		
+		<script src="../js/lib/mui.min.js"></script>
+		<script src="../js/lib/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init();
+		</script>
+		<script type="text/javascript">		
+			mui.plusReady(function() {
+				var top = plus.webview.currentWebview();
+				var page = top.pass;
+				document.getElementById("ttt").innerHTML = top.name;
+				mui("h1#ttt").value = page;
+//				alert(page);
+//				alert(top.name);
+//				document.getElementById("ttt").value = page;
+				
+				var hh = plus.webview.open(page, page, {
+					top: '45px',
+				});
+				
+			});
+		
+			function BackHome() {
+//				alert("I will Back");
+//				alert(plus.webview.getTopWebview().id);
+				plus.webview.getLaunchWebview().show();
+				plus.webview.getTopWebview().close();
+				plus.webview.getWebviewById("loadPage.html").close();
+				
+			}
+		</script>
+	</body>
+
+</html>

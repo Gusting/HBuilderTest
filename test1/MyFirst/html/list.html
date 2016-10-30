@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<title>haha</title>
+		<script src="../js/lib/mui.js"></script>
+		<link href="../css/mui.min.css" rel="stylesheet" /> </head>
+		<link rel="stylesheet" type="text/css" href="../css/mui.css" />
+		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+
+	<body>
+
+		<div class="mui-content">
+			<!--<p id="haha">adfasfas</p>-->
+			<script type="text/javascript">
+				function loadPage(page) {
+					var name = document.getElementById(page).innerHTML;
+//					alert(name);
+//					alert(page);
+//					alert(mui("p#haha").className());
+//					var he = document.getElementById("callback");
+//					console.log(he.innerHTML);
+//					he.innerHTML = "Hello world";
+					plus.webview.getLaunchWebview().hide();
+					mui.openWindow({
+						url: "loadPage.html",
+						id: "loadPage.html",
+						styles: {
+						},
+						extras: {
+							name: name,
+							pass: page
+						}
+					});
+					
+					
+				}
+			</script>
+			<ul id="list" class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" id="http://www.baidu.com" onclick="loadPage(this.id)">
+						百度
+					</a>
+				</li>
+
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" id="http://www.mi.com/mix" onclick="loadPage(this.id)">
+						MIX
+					</a>
+				</li>
+
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" id="http://www.jianshu.com" onclick="loadPage(this.id)">
+						简书
+					</a>
+				</li>
+			</ul>
+
+		</div>
+	</body>
+
+</html>

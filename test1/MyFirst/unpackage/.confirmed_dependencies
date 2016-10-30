@@ -1,0 +1,31 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf",
+			"js/lib/mui.js",
+			"js/lib/jquery.js",
+			"html/list.html",
+			"js/lib/mui.min.js",
+			"css/mui.css",
+			"js/index.js"
+		],
+		"refer": [
+			"html/list.html"
+		]
+	},
+	"html/list.html": {
+		"refer": [
+			"html/loadPage.html"
+		]
+	},
+	"html/loadPage.html": {
+		"resources": [
+			"js/lib/mui.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/lib/mui.min.js"
+		]
+	}
+}

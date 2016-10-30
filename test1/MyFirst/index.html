@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>haha</title>
+		<link rel="stylesheet" href="css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-bars mui-pull-left mui-plus-visible"></a>
+			<a id="info" class="mui-icon mui-icon-info-filled mui-pull-right" style="color: #999;"></a>
+			<h1 class="mui-title">Test</h1>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-icon mui-icon-chatboxes"></span>
+				<span class="mui-tab-label">消息</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-tab-label">设置</span>
+			</a>
+		</nav>
+
+		<script src="js/lib/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/lib/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/lib/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var linked = ["html/list.html", "http://www.baidu.com", "http://www.jianshu.com", "http://www.mi.com/mix/"];
+			mui.init({
+				subpages: [{
+					id: linked[0],
+					url: linked[0],
+					styles: {
+						top: '45px',
+						bottom: '55px',
+//						bounce: 'vertical'
+					}
+				}]
+			});
+		</script>
+
+	</body>
+
+</html>
